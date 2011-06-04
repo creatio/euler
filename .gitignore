@@ -1,0 +1,9 @@
+euler/
+_ReSharper.euler/
+euler.sln
+euler.visualdproj
+bin/
+build.bat
+euler.suo
+gen/
+run.bat
