@@ -22,9 +22,10 @@ int main(string[] argv)
 long largest_palindromic_number(int a, int b)
 {
 	auto largest = -1;
-	foreach(n; a .. b)
+	auto limit = b + 1;
+	foreach(n; a .. limit)
 	{
-		foreach(m; a .. b)
+		foreach(m; a .. limit)
 		{
 			auto mult = n * m;
 			if(ispalindrome(mult))
