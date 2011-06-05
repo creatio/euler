@@ -14,7 +14,7 @@ import std.algorithm;
 
 int main(string[] argv)
 {
-	immutable long number = 600851475143;
+	immutable long number = 600_851_475_143;
 
 	auto largest = prime_factors(number).back;
 	
