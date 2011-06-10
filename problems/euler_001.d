@@ -9,7 +9,10 @@
  * ```````````````````````````````````````````````````````````````````````````
  */
 module euler_001;
+
 import std.stdio;
+import std.range;
+import std.algorithm;
 
 int main(string[] argv)
 {
@@ -23,17 +26,12 @@ int main(string[] argv)
 
 int sum_mulitple_three_five(int limit)
 {
-	auto sum = 0;
-	
-	foreach(number; 0 .. limit)
-		if(number % 3 == 0 || number % 5 == 0)
-			sum += number;
-	
-	return sum;
+	auto three_five = filter!("a % 3 == 0 || a % 5 == 0")(iota(0, limit));
+	return reduce!("a + b")(three_five);
 }
 
 unittest
 {
 	auto result = sum_mulitple_three_five(10);
-	assert( result == 23, "sum multiple below 10 is not equal to 23");
+	assert( result == 23, "sum multiple below 10 is not equal to 23" );
 }
