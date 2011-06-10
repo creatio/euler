@@ -78,6 +78,6 @@ unittest
 	result = prime_factors(13195);
 	
 	assert(result.length == 4, "length of prime factors of 13195 should be 4");
-	assert(result == [5, 7, 13, 29], "should be array of 1");
+	assert(result == [5, 7, 13, 29], "should be array of 4");
 	assert(result.back == 29, "largest should be 29");
 }
