@@ -37,7 +37,8 @@ auto prime_factors(long number)
 			factors ~= i;
 	}
 	
-	return factors;
+	//return factors;
+	return filter!("")(iota(2, number));
 }
 
 /**
